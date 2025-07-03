@@ -60,6 +60,7 @@
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
   animation: gradient-shift 3s ease-in-out infinite;
+  margin: unset;
 }
 
 @keyframes gradient-shift {

@@ -24,7 +24,7 @@ const Layout: React.FC = () => {
     <div className="layout">
       <header className="header">
         <div className="header-container">
-          <div className="header-content">
+          <div className="header-content container">
             <div className="header-left">
               <h1 className="logo">Bean Stream</h1>
             </div>
