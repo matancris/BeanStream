@@ -134,7 +134,7 @@ const CustomerForm: React.FC<CustomerFormProps> = ({
       <AppSelect
         label="Size"
         value={formData.size}
-        onChange={(e) => handleChange('size', e.target.value)}
+        onChange={(value) => handleChange('size', value)}
         error={errors.size}
         options={sizeOptions}
         placeholder="Select size"
@@ -144,7 +144,7 @@ const CustomerForm: React.FC<CustomerFormProps> = ({
       <AppSelect
         label="Milk Type"
         value={formData.milkType}
-        onChange={(e) => handleChange('milkType', e.target.value)}
+        onChange={(value) => handleChange('milkType', value)}
         error={errors.milkType}
         options={milkOptions}
         placeholder="Select milk type"

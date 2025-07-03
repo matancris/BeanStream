@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { User, Search, Plus } from 'lucide-react';
 import { AppButton, AppInput, AppSelect } from '../../../shared/ui';
 
 const ComponentsDemo: React.FC = () => {
@@ -10,31 +11,13 @@ const ComponentsDemo: React.FC = () => {
     { value: 'option1', label: 'Option One' },
     { value: 'option2', label: 'Option Two' },
     { value: 'option3', label: 'Option Three' },
-    { value: 'option4', label: 'Option Four (Disabled)', disabled: true },
+    { value: 'option4', label: 'Option Four (Disabled)' },
   ];
 
   const handleLoadingDemo = () => {
     setLoading(true);
     setTimeout(() => setLoading(false), 3000);
   };
-
-  const UserIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-      <path d="M8 8a3 3 0 100-6 3 3 0 000 6zM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 00-11.215 0c-.22.578.254 1.139.872 1.139h9.47z"/>
-    </svg>
-  );
-
-  const SearchIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-      <path fillRule="evenodd" d="M9.965 11.026a5 5 0 111.06-1.06l2.755 2.754a.75.75 0 11-1.06 1.06l-2.755-2.754zM10.5 7a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" clipRule="evenodd"/>
-    </svg>
-  );
-
-  const PlusIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-      <path d="M8 2a.5.5 0 01.5.5v5h5a.5.5 0 010 1h-5v5a.5.5 0 01-1 0v-5h-5a.5.5 0 010-1h5v-5A.5.5 0 018 2z"/>
-    </svg>
-  );
 
   return (
     <div className="container">
@@ -76,7 +59,7 @@ const ComponentsDemo: React.FC = () => {
             </AppButton>
             <AppButton disabled>Disabled Button</AppButton>
             <AppButton fullWidth>Full Width Button</AppButton>
-            <AppButton leftIcon={<PlusIcon />}>With Left Icon</AppButton>
+            <AppButton leftIcon={<Plus size={16} />}>With Left Icon</AppButton>
           </div>
         </div>
       </section>
@@ -110,13 +93,13 @@ const ComponentsDemo: React.FC = () => {
             <AppInput
               label="Search Input"
               placeholder="Search customers..."
-              leftIcon={<SearchIcon />}
+              leftIcon={<Search size={16} />}
               helperText="Input with left icon"
             />
             <AppInput
               label="User Input"
               placeholder="Enter username..."
-              rightIcon={<UserIcon />}
+              rightIcon={<User size={16} />}
               helperText="Input with right icon"
             />
           </div>
@@ -150,16 +133,16 @@ const ComponentsDemo: React.FC = () => {
               label="Basic Select"
               options={selectOptions}
               value={selectValue}
-              onChange={(e) => setSelectValue(e.target.value)}
+              onChange={setSelectValue}
               placeholder="Choose an option..."
-              helperText="Select from available options"
+              helper="Select from available options"
             />
             <AppSelect
               label="Select with Icon"
               options={selectOptions}
-              leftIcon={<UserIcon />}
+              icon={<User size={16} />}
               placeholder="Choose with icon..."
-              helperText="Select with left icon"
+              helper="Select with left icon"
             />
           </div>
         </div>
@@ -177,7 +160,7 @@ const ComponentsDemo: React.FC = () => {
               options={selectOptions}
               disabled
               placeholder="Cannot select..."
-              helperText="This select is disabled"
+              helper="This select is disabled"
             />
           </div>
         </div>
@@ -192,7 +175,7 @@ const ComponentsDemo: React.FC = () => {
           <div className="card">
             <div className="card-header">
               <h4 className="card-title">Sample Card</h4>
-              <p className="card-subtitle">This is a card component using our design system</p>
+              <p className="card-description">This is a card component using our design system</p>
             </div>
             <div className="card-body">
               <p>

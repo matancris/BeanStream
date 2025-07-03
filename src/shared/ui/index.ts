@@ -11,4 +11,4 @@ export { default as Layout } from './Layout';
 export { default as ProtectedRoute } from './ProtectedRoute';
 
 // Type exports
-export type { SelectOption } from './AppSelect'; 
+export type { AppSelectOption } from './AppSelect'; 
