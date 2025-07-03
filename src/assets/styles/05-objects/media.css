@@ -1,0 +1,47 @@
+/**
+ * OBJECTS - MEDIA
+ * 
+ * The media object pattern - a flexible component for building repetitive
+ * UI components where some media is positioned alongside textual content.
+ */
+
+.media {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.media__object {
+  flex-shrink: 0;
+}
+
+.media__body {
+  flex: 1;
+  min-width: 0; /* Prevents text overflow issues */
+}
+
+.media--center {
+  align-items: center;
+}
+
+.media--bottom {
+  align-items: flex-end;
+}
+
+.media--reverse {
+  flex-direction: row-reverse;
+}
+
+.media--stacked {
+  flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .media--responsive {
+    flex-direction: column;
+  }
+  
+  .media--responsive .media__object {
+    align-self: center;
+  }
+} 

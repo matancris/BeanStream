@@ -1,0 +1,23 @@
+/**
+ * APP.CSS - Main Application Styles
+ * 
+ * This file imports the new ITCSS-based CSS architecture located in
+ * src/assets/styles/ for better organization and maintainability.
+ * 
+ * The new architecture follows modern 2025 CSS best practices:
+ * - ITCSS (Inverted Triangle CSS) methodology
+ * - CSS custom properties for design tokens
+ * - Semantic color system with dark mode support
+ * - Fluid typography and responsive spacing
+ * - Component-based organization
+ */
+
+@import './assets/styles/main.css';
+
+/**
+ * APPLICATION-SPECIFIC STYLES
+ * 
+ * Add any application-specific styles that don't fit into the component
+ * architecture here. Keep this minimal and prefer component styles.
+ */
+

@@ -1,0 +1,169 @@
+/**
+ * OBJECTS - CONTAINER & LAYOUT
+ * 
+ * Modern layout patterns and container objects using design system tokens.
+ * Features responsive containers and flexible layout systems.
+ */
+
+/* ==================================================
+   CONTAINER OBJECTS
+================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--breakpoint-lg);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-container-padding);
+  padding-right: var(--space-container-padding);
+}
+
+.container--fluid {
+  max-width: none;
+}
+
+.container--narrow {
+  max-width: var(--breakpoint-md);
+}
+
+.container--wide {
+  max-width: var(--breakpoint-xl);
+}
+
+/* Legacy containers (for backward compatibility) */
+.container-fluid {
+  width: 100%;
+  padding: var(--content-padding);
+}
+
+.container-narrow {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: var(--content-padding);
+}
+
+/* ==================================================
+   APP LAYOUT SYSTEM
+================================================== */
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-primary);
+}
+
+.app-layout__header {
+  flex-shrink: 0;
+  background-color: var(--color-surface-primary);
+  border-bottom: 1px solid var(--color-border-primary);
+  box-shadow: var(--shadow-sm);
+  z-index: var(--z-header);
+  position: sticky;
+  top: 0;
+}
+
+.app-layout__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  min-height: 0; /* Allows flex children to shrink */
+}
+
+.app-layout__footer {
+  flex-shrink: 0;
+  background-color: var(--color-surface-secondary);
+  border-top: 1px solid var(--color-border-primary);
+  padding: var(--space-4) 0;
+}
+
+/* Layout with sidebar */
+.app-layout--with-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-layout--with-sidebar .app-layout__body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.app-layout__sidebar {
+  flex-shrink: 0;
+  width: 16rem;
+  background-color: var(--color-surface-secondary);
+  border-right: 1px solid var(--color-border-primary);
+  padding: var(--space-6);
+  overflow-y: auto;
+}
+
+.app-layout--with-sidebar .app-layout__main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Layout variants */
+.app-layout--centered .app-layout__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.app-layout--full-width .app-layout__main {
+  padding: 0;
+  max-width: none;
+}
+
+/* ==================================================
+   RESPONSIVE BEHAVIOR
+================================================== */
+
+@media (max-width: 768px) {
+  .app-layout__main {
+    padding: var(--space-4);
+  }
+  
+  .app-layout--with-sidebar .app-layout__body {
+    flex-direction: column;
+  }
+  
+  .app-layout__sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-primary);
+    padding: var(--space-4);
+    order: 2;
+  }
+  
+  .app-layout--with-sidebar .app-layout__main {
+    order: 1;
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-layout__main {
+    padding: var(--space-3);
+  }
+  
+  .app-layout__sidebar {
+    padding: var(--space-3);
+  }
+}
+
+/* Legacy responsive styles */
+@media (min-width: 640px) {
+  .container {
+    padding: var(--content-padding-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: var(--content-padding-lg) var(--space-8);
+  }
+} 

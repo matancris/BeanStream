@@ -1,0 +1,62 @@
+/**
+ * SETTINGS - BREAKPOINTS
+ * 
+ * Responsive breakpoints for consistent media queries.
+ * Uses mobile-first approach with min-width media queries.
+ * 
+ * Naming convention follows common device categories.
+ */
+
+:root {
+  /* ==========================================================================
+     BREAKPOINT VALUES
+     Raw breakpoint values for reference
+  ========================================================================== */
+  
+  --breakpoint-xs: 475px;     /* Extra small devices (large phones) */
+  --breakpoint-sm: 640px;     /* Small devices (tablets) */
+  --breakpoint-md: 768px;     /* Medium devices (small laptops) */
+  --breakpoint-lg: 1024px;    /* Large devices (desktops) */
+  --breakpoint-xl: 1280px;    /* Extra large devices (large desktops) */
+  --breakpoint-2xl: 1536px;   /* 2X large devices (larger desktops) */
+  
+  /* ==========================================================================
+     CONTAINER MAX WIDTHS
+     Maximum container widths at each breakpoint
+  ========================================================================== */
+  
+  --container-xs: 100%;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+}
+
+/**
+ * MEDIA QUERY REFERENCE
+ * 
+ * Use these breakpoints in your CSS:
+ * 
+ * Extra Small (xs): 0px - 474px
+ * @media (max-width: 474px) { ... }
+ * 
+ * Small (sm): 475px - 639px
+ * @media (min-width: 475px) { ... }
+ * @media (min-width: 475px) and (max-width: 639px) { ... }
+ * 
+ * Medium (md): 640px - 767px
+ * @media (min-width: 640px) { ... }
+ * @media (min-width: 640px) and (max-width: 767px) { ... }
+ * 
+ * Large (lg): 768px - 1023px
+ * @media (min-width: 768px) { ... }
+ * @media (min-width: 768px) and (max-width: 1023px) { ... }
+ * 
+ * Extra Large (xl): 1024px - 1279px
+ * @media (min-width: 1024px) { ... }
+ * @media (min-width: 1024px) and (max-width: 1279px) { ... }
+ * 
+ * 2X Large (2xl): 1280px+
+ * @media (min-width: 1280px) { ... }
+ */ 

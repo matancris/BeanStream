@@ -1,0 +1,23 @@
+/**
+ * GENERIC - NORMALIZE
+ * 
+ * Additional normalization beyond the reset.
+ * Handles cross-browser consistency for specific elements.
+ */
+
+/* This file can be populated with additional normalize rules as needed */
+
+/* Example: Ensure consistent table styling */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Example: Consistent form element appearance */
+fieldset {
+  border: none;
+}
+
+legend {
+  padding: 0;
+} 

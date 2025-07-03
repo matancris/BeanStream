@@ -1,0 +1,161 @@
+/**
+ * SETTINGS - TYPOGRAPHY
+ * 
+ * Typography tokens including:
+ * - Font families
+ * - Font weights
+ * - Font sizes (fluid type scale)
+ * - Line heights
+ * - Letter spacing
+ * 
+ * Uses modern techniques like fluid typography and logical font stacks.
+ */
+
+:root {
+  /* ==========================================================================
+     FONT FAMILIES
+     Modern font stacks with system fallbacks
+  ========================================================================== */
+  
+  /* Sans-serif stack - Primary */
+  --font-family-sans: 
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  
+  /* Serif stack - Secondary */
+  --font-family-serif: 
+    'Times New Roman',
+    'Georgia',
+    'Palatino',
+    'Times',
+    serif;
+  
+  /* Monospace stack - Code */
+  --font-family-mono: 
+    'SF Mono',
+    'Monaco',
+    'Inconsolata',
+    'Roboto Mono',
+    'Oxygen Mono',
+    'Ubuntu Monospace',
+    'Source Code Pro',
+    'Fira Mono',
+    'Droid Sans Mono',
+    'Courier New',
+    monospace;
+  
+  /* ==========================================================================
+     FONT WEIGHTS
+  ========================================================================== */
+  
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  /* ==========================================================================
+     FONT SIZES - FLUID TYPE SCALE
+     Uses clamp() for responsive typography without media queries
+  ========================================================================== */
+  
+  /* Base font size for calculations */
+  --font-size-base: 1rem; /* 16px */
+  
+  /* Fluid type scale */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);    /* 12-14px */
+  --font-size-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);    /* 14-16px */
+  --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);   /* 16-18px */
+  --font-size-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem); /* 18-20px */
+  --font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);     /* 20-24px */
+  --font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);  /* 24-30px */
+  --font-size-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 2.25rem); /* 30-36px */
+  --font-size-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3rem);      /* 36-48px */
+  --font-size-5xl: clamp(3rem, 2.55rem + 2.25vw, 3.75rem);     /* 48-60px */
+  --font-size-6xl: clamp(3.75rem, 3.15rem + 3vw, 4.5rem);      /* 60-72px */
+  
+  /* ==========================================================================
+     LINE HEIGHTS
+  ========================================================================== */
+  
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* ==========================================================================
+     LETTER SPACING
+  ========================================================================== */
+  
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+  
+  /* ==========================================================================
+     SEMANTIC TYPOGRAPHY TOKENS
+     Ready-to-use combinations for common text patterns
+  ========================================================================== */
+  
+  /* Headings */
+  --typography-h1: var(--font-weight-extrabold) var(--font-size-4xl) / var(--line-height-tight) var(--font-family-sans);
+  --typography-h2: var(--font-weight-bold) var(--font-size-3xl) / var(--line-height-tight) var(--font-family-sans);
+  --typography-h3: var(--font-weight-bold) var(--font-size-2xl) / var(--line-height-snug) var(--font-family-sans);
+  --typography-h4: var(--font-weight-semibold) var(--font-size-xl) / var(--line-height-snug) var(--font-family-sans);
+  --typography-h5: var(--font-weight-semibold) var(--font-size-lg) / var(--line-height-normal) var(--font-family-sans);
+  --typography-h6: var(--font-weight-medium) var(--font-size-base) / var(--line-height-normal) var(--font-family-sans);
+  
+  /* Body text */
+  --typography-body-lg: var(--font-weight-normal) var(--font-size-lg) / var(--line-height-relaxed) var(--font-family-sans);
+  --typography-body: var(--font-weight-normal) var(--font-size-base) / var(--line-height-normal) var(--font-family-sans);
+  --typography-body-sm: var(--font-weight-normal) var(--font-size-sm) / var(--line-height-normal) var(--font-family-sans);
+  
+  /* Labels and captions */
+  --typography-label: var(--font-weight-medium) var(--font-size-sm) / var(--line-height-normal) var(--font-family-sans);
+  --typography-caption: var(--font-weight-normal) var(--font-size-xs) / var(--line-height-normal) var(--font-family-sans);
+  
+  /* Code */
+  --typography-code: var(--font-weight-normal) var(--font-size-sm) / var(--line-height-normal) var(--font-family-mono);
+  
+  /* Interactive text */
+  --typography-button: var(--font-weight-medium) var(--font-size-sm) / var(--line-height-none) var(--font-family-sans);
+  --typography-link: var(--font-weight-normal) var(--font-size-base) / var(--line-height-normal) var(--font-family-sans);
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   Fine-tune typography for different screen sizes
+========================================================================== */
+
+@media (min-width: 768px) {
+  :root {
+    /* Slightly larger line heights on larger screens for better readability */
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.75;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Even more generous spacing on desktop */
+    --line-height-relaxed: 1.8;
+    --line-height-loose: 2.2;
+  }
+} 

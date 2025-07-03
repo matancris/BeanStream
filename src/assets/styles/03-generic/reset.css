@@ -1,0 +1,171 @@
+/**
+ * GENERIC - RESET
+ * 
+ * Modern CSS reset based on modern-normalize and Andy Bell's reset.
+ * Provides sensible defaults and removes browser inconsistencies.
+ * 
+ * References:
+ * - https://github.com/sindresorhus/modern-normalize
+ * - https://piccalil.li/blog/a-modern-css-reset/
+ */
+
+/* ==========================================================================
+   BOX SIZING RESET
+========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   REMOVE DEFAULT MARGINS AND PADDING
+========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   HTML AND BODY SETUP
+========================================================================== */
+
+html {
+  /* Full width setup */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  /* Prevent font size inflation */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* ==========================================================================
+   REMOVE LIST STYLES
+========================================================================== */
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* ==========================================================================
+   SHORTENED ELEMENTS
+========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+  /* Remove max-width constraint to allow full-width layouts */
+}
+
+/* ==========================================================================
+   MEDIA ELEMENTS
+========================================================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================================================
+   FORM ELEMENTS
+========================================================================== */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   LINKS
+========================================================================== */
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   FOCUS STYLES
+========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   HIGH CONTRAST MODE
+========================================================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --color-border-primary: var(--color-border-strong);
+  }
+} 

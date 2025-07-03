@@ -1,0 +1,81 @@
+/**
+ * TOOLS - MIXINS
+ * 
+ * Since we're using vanilla CSS, this file documents common patterns
+ * and utility "mixins" that can be copy-pasted or used as reference.
+ * 
+ * In a Sass/SCSS setup, these would be actual mixins.
+ */
+
+/* ==========================================================================
+   COMMON PATTERNS / "MIXINS"
+   
+   Copy these patterns when needed:
+========================================================================== */
+
+/**
+ * VISUALLY HIDDEN
+ * Hide content visually but keep it accessible to screen readers
+ */
+/*
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+*/
+
+/**
+ * FOCUS RING
+ * Consistent focus ring styles
+ */
+/*
+.focus-ring {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+*/
+
+/**
+ * BUTTON RESET
+ * Reset button styles
+ */
+/*
+.button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+*/
+
+/**
+ * TRUNCATE TEXT
+ * Single line text truncation
+ */
+/*
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+*/
+
+/**
+ * CIRCLE
+ * Perfect circle shape
+ */
+/*
+.circle {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+*/ 

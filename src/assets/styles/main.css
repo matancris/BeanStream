@@ -1,0 +1,72 @@
+@charset 'utf-8';
+
+/**
+ * MAIN.CSS - ITCSS Architecture
+ * 
+ * This file serves as the entry point for all styles.
+ * It follows the Inverted Triangle CSS (ITCSS) methodology,
+ * organizing CSS from generic to specific, low to high specificity.
+ * 
+ * Architecture: https://itcss.io/
+ * 
+ * The triangle:
+ * 1. Settings    - Variables, config
+ * 2. Tools       - Mixins and functions  
+ * 3. Generic     - Resets, normalize
+ * 4. Base        - Element defaults
+ * 5. Objects     - Layout patterns
+ * 6. Components  - Specific UI pieces
+ * 7. Utilities   - Helpers and overrides
+ */
+
+/*========================================================================
+  01. SETTINGS - Variables, configuration, design tokens
+========================================================================*/
+@import './01-settings/variables.css';
+@import './01-settings/colors.css';
+@import './01-settings/typography.css';
+@import './01-settings/spacing.css';
+@import './01-settings/breakpoints.css';
+
+/*========================================================================
+  02. TOOLS - Mixins, functions (if using preprocessor)
+========================================================================*/
+@import './02-tools/mixins.css';
+
+/*========================================================================
+  03. GENERIC - Resets, normalize, box-sizing
+========================================================================*/
+@import './03-generic/reset.css';
+@import './03-generic/normalize.css';
+
+/*========================================================================
+  04. BASE - Element defaults (no classes)
+========================================================================*/
+@import './04-base/typography.css';
+@import './04-base/forms.css';
+@import './04-base/media.css';
+
+/*========================================================================
+  05. OBJECTS - Layout patterns, design patterns
+========================================================================*/
+@import './05-objects/container.css';
+@import './05-objects/grid.css';
+@import './05-objects/media.css';
+
+/*========================================================================
+  06. COMPONENTS - Specific UI components
+========================================================================*/
+@import './06-components/buttons.css';
+@import './06-components/forms.css';
+@import './06-components/cards.css';
+@import './06-components/navigation.css';
+@import './06-components/tables.css';
+@import './06-components/alerts.css';
+
+/*========================================================================
+  07. UTILITIES - Helper classes, overrides
+========================================================================*/
+@import './07-utilities/spacing.css';
+@import './07-utilities/typography.css';
+@import './07-utilities/display.css';
+@import './07-utilities/visibility.css'; 

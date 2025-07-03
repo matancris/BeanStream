@@ -1,0 +1,62 @@
+/**
+ * INDEX.CSS - Root Application Styles
+ * 
+ * Base styles for the React application root.
+ * This ensures full-width layout and proper integration with our design system.
+ */
+
+/* Import our design system */
+@import './assets/styles/main.css';
+
+/* ==================================================
+   ROOT ELEMENT SETUP
+================================================== */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================================================
+   ENSURE FULL WIDTH THROUGHOUT
+================================================== */
+
+html,
+body,
+#root {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+   PREVENT UNWANTED DEFAULTS
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove any default centering */
+body {
+  display: block !important;
+  place-items: unset !important;
+  min-width: 100% !important;
+}
+
+/* ==================================================
+   RESPONSIVE BASE
+================================================== */
+
+@media (max-width: 320px) {
+  html {
+    font-size: 14px; /* Slightly smaller base font for very small screens */
+  }
+}
+
+/* All styles are now handled by our design system in main.css */

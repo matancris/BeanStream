@@ -1,0 +1,135 @@
+/**
+ * SETTINGS - SPACING
+ * 
+ * Consistent spacing scale for margins, padding, and gaps.
+ * Based on a geometric progression for visual harmony.
+ * 
+ * Uses rem units for accessibility and scalability.
+ */
+
+:root {
+  /* ==========================================================================
+     SPACING SCALE
+     Base-8 spacing scale (0.5rem = 8px)
+  ========================================================================== */
+  
+  --space-0: 0rem;          /* 0px */
+  --space-px: 0.0625rem;    /* 1px */
+  --space-0_5: 0.125rem;    /* 2px */
+  --space-1: 0.25rem;       /* 4px */
+  --space-1_5: 0.375rem;    /* 6px */
+  --space-2: 0.5rem;        /* 8px */
+  --space-2_5: 0.625rem;    /* 10px */
+  --space-3: 0.75rem;       /* 12px */
+  --space-3_5: 0.875rem;    /* 14px */
+  --space-4: 1rem;          /* 16px */
+  --space-5: 1.25rem;       /* 20px */
+  --space-6: 1.5rem;        /* 24px */
+  --space-7: 1.75rem;       /* 28px */
+  --space-8: 2rem;          /* 32px */
+  --space-9: 2.25rem;       /* 36px */
+  --space-10: 2.5rem;       /* 40px */
+  --space-11: 2.75rem;      /* 44px */
+  --space-12: 3rem;         /* 48px */
+  --space-14: 3.5rem;       /* 56px */
+  --space-16: 4rem;         /* 64px */
+  --space-20: 5rem;         /* 80px */
+  --space-24: 6rem;         /* 96px */
+  --space-28: 7rem;         /* 112px */
+  --space-32: 8rem;         /* 128px */
+  --space-36: 9rem;         /* 144px */
+  --space-40: 10rem;        /* 160px */
+  --space-44: 11rem;        /* 176px */
+  --space-48: 12rem;        /* 192px */
+  --space-52: 13rem;        /* 208px */
+  --space-56: 14rem;        /* 224px */
+  --space-60: 15rem;        /* 240px */
+  --space-64: 16rem;        /* 256px */
+  --space-72: 18rem;        /* 288px */
+  --space-80: 20rem;        /* 320px */
+  --space-96: 24rem;        /* 384px */
+  
+  /* ==========================================================================
+     SEMANTIC SPACING TOKENS
+     Purpose-based spacing for common use cases
+  ========================================================================== */
+  
+  /* Component spacing */
+  --space-component-xs: var(--space-1);    /* 4px - Tight internal spacing */
+  --space-component-sm: var(--space-2);    /* 8px - Small internal spacing */
+  --space-component-md: var(--space-4);    /* 16px - Standard internal spacing */
+  --space-component-lg: var(--space-6);    /* 24px - Large internal spacing */
+  --space-component-xl: var(--space-8);    /* 32px - Extra large internal spacing */
+  
+  /* Layout spacing */
+  --space-layout-xs: var(--space-4);       /* 16px - Minimal layout gap */
+  --space-layout-sm: var(--space-6);       /* 24px - Small layout gap */
+  --space-layout-md: var(--space-8);       /* 32px - Standard layout gap */
+  --space-layout-lg: var(--space-12);      /* 48px - Large layout gap */
+  --space-layout-xl: var(--space-16);      /* 64px - Extra large layout gap */
+  --space-layout-2xl: var(--space-24);     /* 96px - Section spacing */
+  --space-layout-3xl: var(--space-32);     /* 128px - Page spacing */
+  
+  /* Content spacing */
+  --space-content-xs: var(--space-2);      /* 8px - Tight content spacing */
+  --space-content-sm: var(--space-3);      /* 12px - Small content spacing */
+  --space-content-md: var(--space-4);      /* 16px - Standard content spacing */
+  --space-content-lg: var(--space-6);      /* 24px - Large content spacing */
+  --space-content-xl: var(--space-8);      /* 32px - Extra large content spacing */
+  
+  /* Form spacing */
+  --space-form-field: var(--space-4);      /* 16px - Space between form fields */
+  --space-form-group: var(--space-6);      /* 24px - Space between form groups */
+  --space-form-section: var(--space-8);    /* 32px - Space between form sections */
+  
+  /* Stack spacing (for vertical rhythm) */
+  --space-stack-xs: var(--space-2);        /* 8px - Tight vertical rhythm */
+  --space-stack-sm: var(--space-3);        /* 12px - Small vertical rhythm */
+  --space-stack-md: var(--space-4);        /* 16px - Standard vertical rhythm */
+  --space-stack-lg: var(--space-6);        /* 24px - Large vertical rhythm */
+  --space-stack-xl: var(--space-8);        /* 32px - Extra large vertical rhythm */
+  
+  /* ==========================================================================
+     NEGATIVE SPACING
+     For overlapping elements and negative margins
+  ========================================================================== */
+  
+  --space-n-1: -0.25rem;    /* -4px */
+  --space-n-2: -0.5rem;     /* -8px */
+  --space-n-3: -0.75rem;    /* -12px */
+  --space-n-4: -1rem;       /* -16px */
+  --space-n-5: -1.25rem;    /* -20px */
+  --space-n-6: -1.5rem;     /* -24px */
+  --space-n-8: -2rem;       /* -32px */
+  --space-n-10: -2.5rem;    /* -40px */
+  --space-n-12: -3rem;      /* -48px */
+  --space-n-16: -4rem;      /* -64px */
+  --space-n-20: -5rem;      /* -80px */
+  --space-n-24: -6rem;      /* -96px */
+}
+
+/* ==========================================================================
+   RESPONSIVE SPACING
+   Adjust spacing for different screen sizes
+========================================================================== */
+
+@media (min-width: 768px) {
+  :root {
+    /* Increase layout spacing on larger screens */
+    --space-layout-md: var(--space-10);     /* 40px */
+    --space-layout-lg: var(--space-16);     /* 64px */
+    --space-layout-xl: var(--space-20);     /* 80px */
+    --space-layout-2xl: var(--space-32);    /* 128px */
+    --space-layout-3xl: var(--space-40);    /* 160px */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Further increase spacing on desktop */
+    --space-layout-lg: var(--space-20);     /* 80px */
+    --space-layout-xl: var(--space-24);     /* 96px */
+    --space-layout-2xl: var(--space-40);    /* 160px */
+    --space-layout-3xl: var(--space-48);    /* 192px */
+  }
+} 

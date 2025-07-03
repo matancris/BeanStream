@@ -1,0 +1,47 @@
+/**
+ * UTILITIES - VISIBILITY
+ * 
+ * Visibility and opacity utility classes.
+ */
+
+/* Visibility */
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+
+/* Display states */
+.block { display: block; }
+.hidden { display: none; }
+
+/* Opacity */
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: 0.25; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
+
+/* Responsive visibility utilities */
+@media (max-width: 639px) {
+  .hidden-mobile { display: none; }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .hidden-tablet { display: none; }
+}
+
+@media (min-width: 768px) {
+  .hidden-desktop { display: none; }
+}
+
+@media (min-width: 640px) {
+  .mobile-only { display: none; }
+}
+
+@media (max-width: 767px) {
+  .desktop-only { display: none; }
+}
+
+/* Print utilities */
+@media print {
+  .print-hidden { display: none !important; }
+  .print-visible { display: block !important; }
+} 

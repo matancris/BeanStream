@@ -1,0 +1,275 @@
+/**
+ * SETTINGS - COLORS
+ * 
+ * Color tokens for the design system.
+ * Uses semantic naming for better maintainability and theming support.
+ * 
+ * Structure:
+ * 1. Raw color palette (hue-based)
+ * 2. Semantic color tokens (purpose-based)
+ * 3. Component-specific colors
+ * 4. Dark mode support
+ */
+
+:root {
+  /* ==========================================================================
+     RAW COLOR PALETTE
+     Base colors used throughout the system
+  ========================================================================== */
+  
+  /* Neutral colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  
+  /* Gray scale */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+  
+  /* Blue scale */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #172554;
+  
+  /* Red scale */
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
+  --color-red-950: #450a0a;
+  
+  /* Green scale */
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+  --color-green-950: #052e16;
+  
+  /* Yellow scale */
+  --color-yellow-50: #fefce8;
+  --color-yellow-100: #fef3c7;
+  --color-yellow-200: #fde68a;
+  --color-yellow-300: #fcd34d;
+  --color-yellow-400: #fbbf24;
+  --color-yellow-500: #f59e0b;
+  --color-yellow-600: #d97706;
+  --color-yellow-700: #b45309;
+  --color-yellow-800: #92400e;
+  --color-yellow-900: #78350f;
+  --color-yellow-950: #451a03;
+  
+  /* ==========================================================================
+     SEMANTIC COLOR TOKENS
+     Purpose-based colors that reference the raw palette
+  ========================================================================== */
+  
+  /* Background colors */
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-gray-50);
+  --color-bg-tertiary: var(--color-gray-100);
+  --color-bg-inverse: var(--color-gray-900);
+  
+  /* Surface colors */
+  --color-surface-primary: var(--color-white);
+  --color-surface-secondary: var(--color-gray-50);
+  --color-surface-raised: var(--color-white);
+  --color-surface-overlay: var(--color-white);
+  
+  /* Text colors */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-tertiary: var(--color-gray-500);
+  --color-text-disabled: var(--color-gray-400);
+  --color-text-inverse: var(--color-white);
+  --color-text-link: var(--color-blue-600);
+  --color-text-link-hover: var(--color-blue-700);
+  
+  /* Border colors */
+  --color-border-primary: var(--color-gray-200);
+  --color-border-secondary: var(--color-gray-300);
+  --color-border-strong: var(--color-gray-400);
+  --color-border-inverse: var(--color-gray-700);
+  
+  /* Interactive colors */
+  --color-interactive-primary: var(--color-blue-600);
+  --color-interactive-primary-hover: var(--color-blue-700);
+  --color-interactive-primary-active: var(--color-blue-800);
+  --color-interactive-primary-disabled: var(--color-gray-300);
+  
+  --color-interactive-secondary: var(--color-gray-600);
+  --color-interactive-secondary-hover: var(--color-gray-700);
+  --color-interactive-secondary-active: var(--color-gray-800);
+  
+  /* Status colors */
+  --color-status-success: var(--color-green-600);
+  --color-status-success-bg: var(--color-green-50);
+  --color-status-success-border: var(--color-green-200);
+  
+  --color-status-warning: var(--color-yellow-600);
+  --color-status-warning-bg: var(--color-yellow-50);
+  --color-status-warning-border: var(--color-yellow-200);
+  
+  --color-status-error: var(--color-red-600);
+  --color-status-error-bg: var(--color-red-50);
+  --color-status-error-border: var(--color-red-200);
+  
+  --color-status-info: var(--color-blue-600);
+  --color-status-info-bg: var(--color-blue-50);
+  --color-status-info-border: var(--color-blue-200);
+  
+  /* Focus colors */
+  --color-focus-ring: var(--color-blue-500);
+  --color-focus-ring-offset: var(--color-white);
+}
+
+/* ==========================================================================
+   LIGHT THEME (DEFAULT)
+   Explicit light theme that overrides system preferences
+========================================================================== */
+
+[data-theme="light"],
+:root {
+  /* Background colors */
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-gray-50);
+  --color-bg-tertiary: var(--color-gray-100);
+  --color-bg-inverse: var(--color-gray-900);
+  
+  /* Surface colors */
+  --color-surface-primary: var(--color-white);
+  --color-surface-secondary: var(--color-gray-50);
+  --color-surface-raised: var(--color-white);
+  --color-surface-overlay: var(--color-white);
+  
+  /* Text colors */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-tertiary: var(--color-gray-500);
+  --color-text-disabled: var(--color-gray-400);
+  --color-text-inverse: var(--color-white);
+  --color-text-link: var(--color-blue-600);
+  --color-text-link-hover: var(--color-blue-700);
+  
+  /* Border colors */
+  --color-border-primary: var(--color-gray-200);
+  --color-border-secondary: var(--color-gray-300);
+  --color-border-strong: var(--color-gray-400);
+  --color-border-inverse: var(--color-gray-700);
+  
+  /* Interactive colors */
+  --color-interactive-primary: var(--color-blue-600);
+  --color-interactive-primary-hover: var(--color-blue-700);
+  --color-interactive-primary-active: var(--color-blue-800);
+  --color-interactive-primary-disabled: var(--color-gray-300);
+  
+  --color-interactive-secondary: var(--color-gray-600);
+  --color-interactive-secondary-hover: var(--color-gray-700);
+  --color-interactive-secondary-active: var(--color-gray-800);
+  
+  /* Status colors */
+  --color-status-success: var(--color-green-600);
+  --color-status-success-bg: var(--color-green-50);
+  --color-status-success-border: var(--color-green-200);
+  
+  --color-status-warning: var(--color-yellow-600);
+  --color-status-warning-bg: var(--color-yellow-50);
+  --color-status-warning-border: var(--color-yellow-200);
+  
+  --color-status-error: var(--color-red-600);
+  --color-status-error-bg: var(--color-red-50);
+  --color-status-error-border: var(--color-red-200);
+  
+  --color-status-info: var(--color-blue-600);
+  --color-status-info-bg: var(--color-blue-50);
+  --color-status-info-border: var(--color-blue-200);
+  
+  /* Focus colors */
+  --color-focus-ring: var(--color-blue-500);
+  --color-focus-ring-offset: var(--color-white);
+}
+
+/* ==========================================================================
+   EXPLICIT DARK MODE CLASS
+   For manual dark mode toggling
+========================================================================== */
+
+[data-theme="dark"] {
+  /* Same as dark mode media query but as explicit class */
+  --color-bg-primary: var(--color-gray-900);
+  --color-bg-secondary: var(--color-gray-800);
+  --color-bg-tertiary: var(--color-gray-700);
+  --color-bg-inverse: var(--color-white);
+  
+  --color-surface-primary: var(--color-gray-900);
+  --color-surface-secondary: var(--color-gray-800);
+  --color-surface-raised: var(--color-gray-800);
+  --color-surface-overlay: var(--color-gray-800);
+  
+  --color-text-primary: var(--color-gray-100);
+  --color-text-secondary: var(--color-gray-300);
+  --color-text-tertiary: var(--color-gray-400);
+  --color-text-disabled: var(--color-gray-600);
+  --color-text-inverse: var(--color-gray-900);
+  --color-text-link: var(--color-blue-400);
+  --color-text-link-hover: var(--color-blue-300);
+  
+  --color-border-primary: var(--color-gray-700);
+  --color-border-secondary: var(--color-gray-600);
+  --color-border-strong: var(--color-gray-500);
+  --color-border-inverse: var(--color-gray-300);
+  
+  --color-interactive-primary: var(--color-blue-500);
+  --color-interactive-primary-hover: var(--color-blue-400);
+  --color-interactive-primary-active: var(--color-blue-600);
+  --color-interactive-primary-disabled: var(--color-gray-600);
+  
+  --color-interactive-secondary: var(--color-gray-400);
+  --color-interactive-secondary-hover: var(--color-gray-300);
+  --color-interactive-secondary-active: var(--color-gray-500);
+  
+  --color-status-success: var(--color-green-400);
+  --color-status-success-bg: rgba(34, 197, 94, 0.1);
+  --color-status-success-border: var(--color-green-700);
+  
+  --color-status-warning: var(--color-yellow-400);
+  --color-status-warning-bg: rgba(245, 158, 11, 0.1);
+  --color-status-warning-border: var(--color-yellow-700);
+  
+  --color-status-error: var(--color-red-400);
+  --color-status-error-bg: rgba(239, 68, 68, 0.1);
+  --color-status-error-border: var(--color-red-700);
+  
+  --color-status-info: var(--color-blue-400);
+  --color-status-info-bg: rgba(59, 130, 246, 0.1);
+  --color-status-info-border: var(--color-blue-700);
+  
+  --color-focus-ring-offset: var(--color-gray-900);
+} 
